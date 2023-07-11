@@ -1,6 +1,42 @@
+:root {
+  --color-primary: #25282a;
+  --color-secondary: #cc4e2d;
+  --color-accent: #f5b335;
+  --color-white: #ffffff;
+  --color-highlight: #38778a;
+}
+
+html, body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 30px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+}
+
+.header-title {
+  margin: 0;
+}
+
+.parent-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin: 10px;
+}
+
+.search-bar {
+  margin-left: 10px;
 }
