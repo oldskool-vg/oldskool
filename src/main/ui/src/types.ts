@@ -14,4 +14,3 @@ export type CardData = {
   sets: string[];
   legality: string;
 };
-
