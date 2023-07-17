@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CardData } from '../types';
+import { CardData } from '../../types';
 
 type CardProps = {
   card: CardData;

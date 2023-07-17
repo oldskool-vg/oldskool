@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card'
-import { CardData } from '../types';
+import { CardData } from '../../types';
 
 const mockData: CardData[] = [
   {

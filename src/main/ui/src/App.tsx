@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
-import Cards from './components/Cards';
+import HomePage from './components/Home';
+import About from './components/About';
+import CardDatabase from './components/CardDatabase';
+import Rules from './components/Rules';
 
 function App() {
-  const [search, setSearch] = useState<string>('')
+  // const [search, setSearch] = useState<string>('')
+  const [siteState, setSiteState] = useState<string>('Home');
 
   return (
     <div className="App">
       <header className='header'>
         <h1 className='header-title'>Oldskool Vanguard</h1>
       </header>
-      <input className='search-bar' placeholder='Search!' onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
-      <div className='parent-cards'>
-        <Cards search={search}/>
-      </div>
+
+      {/* <>
+        <HomePage />
+      </> */}
+
     </div>
   );
 }
