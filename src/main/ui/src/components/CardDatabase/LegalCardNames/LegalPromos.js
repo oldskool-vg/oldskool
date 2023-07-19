@@ -30,14 +30,4 @@ const legalPromos = [
   'Land Battle Support Type, Enigship',
   'No Life King, Death Anchor',
   'Dark Lord of Pale Moon',
-  'Darkside Pegasus',
-  'Giro',
-  'Demonic Dragon Berserker, Vasuki',
-  'Exculpate the Blaster',
-  'Flare Whip Dragon',
-  'Red Magma',
-  'Rumble Gun Dragon',
-  'Medical Gunner, Hermieres',
-  'Assault Dragon, Circular Spino',
-  'Battle Siren, Neferli'
 ]

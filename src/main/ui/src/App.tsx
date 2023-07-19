@@ -4,20 +4,30 @@ import About from './components/About';
 import CardDatabase from './components/CardDatabase';
 import Rules from './components/Rules';
 
-function App() {
-  const [siteState, setSiteState] = useState<string>('HomePage');
+interface AppState {
+  state: string;
+}
+
+const App: React.FC = () => {
+  const [siteState, setSiteState] = useState<AppState>({
+    state: 'HomePage',
+  });
+
+  const updateState = (newState: string) => {
+    setSiteState({state: newState});
+  }
 
   let componentToRender = null;
-  if (siteState === 'HomePage') {
+  if (siteState.state === 'HomePage') {
     componentToRender = <HomePage />;
-  } else if (siteState === 'About') {
+  } else if (siteState.state === 'About') {
     componentToRender = <About />;
-  } else if (siteState === 'CardDatabase') {
+  } else if (siteState.state === 'CardDatabase') {
     componentToRender = <CardDatabase />;
-  } else if (siteState === 'Rules') {
-    componentToRender = <Rules />;
+  } else if (siteState.state === 'Rules') {
+    componentToRender = <Rules updateState={updateState} />;
   } else {
-    componentToRender = <div className="Oopsie">Oops! Something wrong happened.</div>
+    componentToRender = <div className="Oopsie">Oops! Something went wrong.</div>
   }
 
   return (
@@ -26,10 +36,10 @@ function App() {
         <h1 className="header-title">Oldskool Vanguard</h1>
 
         <div className="Navigation">
-          <button className="NavButton" onClick={(e) => {setSiteState('HomePage')}} >Home</button>
-          <button className="NavButton" onClick={(e) => {setSiteState('About')}}>About</button>
-          <button className="NavButton" onClick={(e) => {setSiteState('CardDatabase')}}>Card Database</button>
-          <button className="NavButton" onClick={(e) => {setSiteState('Rules')}}>Rules</button>
+          <button className="NavButton" onClick={(e) => {updateState('HomePage')}} >Home</button>
+          <button className="NavButton" onClick={(e) => {updateState('About')}}>About</button>
+          <button className="NavButton" onClick={(e) => {updateState('CardDatabase')}}>Card Database</button>
+          <button className="NavButton" onClick={(e) => {updateState('Rules')}}>Rules</button>
         </div>
       </header>
 
