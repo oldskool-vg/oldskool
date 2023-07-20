@@ -40,3 +40,9 @@ header {
 .search-bar {
   margin-left: 10px;
 }
+
+.pdf-container {
+  margin: 10px 0;
+  height: 428px;
+  overflow: hidden;
+}

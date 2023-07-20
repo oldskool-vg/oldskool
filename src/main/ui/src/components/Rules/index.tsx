@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Banlist from './Banlist';
-// import Cardpool from './Cardpool';
 import LegalSets from './LegalSets';
+import Rulebook from './Rulebook';
 import RuleDifferences from './RuleDifferences';
 
 interface RulesProps {
@@ -30,6 +30,12 @@ const Rules: React.FC<RulesProps> = ({updateState}) => {
   }
 
   const [showRulebook, setShowRulebook] = useState<boolean>(false);
+  let rulebookDetails = null;
+  if (showRulebook === true) {
+    rulebookDetails = <Rulebook />
+  } else {
+    rulebookDetails = null;
+  }
 
   const [showRuleDiffs, setShowRuleDiffs] = useState<boolean>(false);
   let ruleDiffDetails = null;
@@ -61,8 +67,9 @@ const Rules: React.FC<RulesProps> = ({updateState}) => {
         <div>{legalSetDetails}</div>
 
         <li>
-          <button>Rulebook</button>
+          <button onClick={(e) => setShowRulebook(!showRulebook)}>Rulebook</button>
         </li>
+        <div>{rulebookDetails}</div>
 
         <li>
           <button onClick={(e) => setShowRuleDiffs(!showRuleDiffs)}>Rule Differences between Oldskool and Modern</button>
