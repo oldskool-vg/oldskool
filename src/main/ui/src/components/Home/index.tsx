@@ -6,7 +6,7 @@ function HomePage() {
     // Put a cool background image that scales with the website
     <div>
 
-      <p>Oldskool Vanguard is a website ran by fans of Cardfight!! Vanguard and is in no way affiliated with Bushiroad or the Cardfight!! Vanguard property.</p>
+      <p className="dontSueUsPls">Oldskool Vanguard is a website ran by fans of Cardfight!! Vanguard and is in no way affiliated with Bushiroad or the Cardfight!! Vanguard property.</p>
     </div>
   )
 }
