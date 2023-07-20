@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import Banlist from './Banlist';
-import Cardpool from './Cardpool';
+// import Cardpool from './Cardpool';
 import LegalSets from './LegalSets';
 import RuleDifferences from './RuleDifferences';
 
-function Rules() {
+interface RulesProps {
+  updateState: (newState: string) => void;
+}
+
+const Rules: React.FC<RulesProps> = ({updateState}) => {
+  const switchToCardDB = () => {
+    updateState('CardDatabase');
+  }
+
   const [showBanlist, setShowBanlist] = useState<boolean>(false);
   let banlistDetails = null;
   if (showBanlist === true) {
     banlistDetails = <Banlist />
   } else {
     banlistDetails = null;
-  }
-
-  const [showCardpool, setShowCardpool] = useState<boolean>(false);
-  let cardpoolDetails = null;
-  if (showCardpool === true) {
-    cardpoolDetails = <Cardpool />
-  } else {
-    cardpoolDetails = null;
   }
 
   const [showLegalSets, setShowLegalSets] = useState<boolean>(false);
@@ -47,26 +47,25 @@ function Rules() {
       </div>
       <ul>
         <li>
-          <a href="#" onClick={(e) => setShowBanlist(!showBanlist)}>Banlist</a>
+          <button onClick={(e) => setShowBanlist(!showBanlist)}>Banlist</button>
         </li>
         <div>{banlistDetails}</div>
 
         <li>
-          <a href="#" onClick={(e) => setShowCardpool(!showCardpool)}>Cardpool</a>
+          <button onClick={() => switchToCardDB()}>Cardpool</button>
         </li>
-        <div>{cardpoolDetails}</div>
 
         <li>
-          <a href="#" onClick={(e) => setShowLegalSets(!showLegalSets)}>Legal Sets</a>
+          <button onClick={(e) => setShowLegalSets(!showLegalSets)}>Legal Sets</button>
         </li>
         <div>{legalSetDetails}</div>
 
         <li>
-          <a href="#">Rulebook</a>
+          <button>Rulebook</button>
         </li>
 
         <li>
-          <a href="#" onClick={(e) => setShowRuleDiffs(!showRuleDiffs)}>Rule Differences between Oldskool and Modern</a>
+          <button onClick={(e) => setShowRuleDiffs(!showRuleDiffs)}>Rule Differences between Oldskool and Modern</button>
         </li>
         <div>{ruleDiffDetails}</div>
 

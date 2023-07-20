@@ -13,4 +13,4 @@ export type CardData = {
   image: string;
   sets: string[];
   legality: string;
-};
+}

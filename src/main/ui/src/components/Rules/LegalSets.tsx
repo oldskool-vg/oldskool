@@ -3,7 +3,7 @@ import React from 'react';
 function LegalSets() {
   return (
     <div>
-      <h2>The Following Releases Are Legal in Oldskool:</h2>
+      <h2>The Following Releases Are Legal In Oldskool:</h2>
       <h4>Booster Sets</h4>
       <table>
         <tr>
