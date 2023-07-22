@@ -1,3 +1,5 @@
+$test-color: red;
+
 :root {
   --color-primary: #25282a;
   --color-secondary: #cc4e2d;
@@ -45,4 +47,10 @@ header {
   margin: 10px 0;
   height: 428px;
   overflow: hidden;
+}
+
+.rules {
+  ul {
+    color: $test-color;
+  }
 }

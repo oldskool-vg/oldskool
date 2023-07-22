@@ -47,7 +47,7 @@ const Rules: React.FC<RulesProps> = ({updateState}) => {
 
 
   return (
-    <div className="Rules">
+    <div className="rules">
       <div>
         <h2>Format Rules</h2>
       </div>
