@@ -25,32 +25,36 @@ const RuleBookViewer: React.FC = () => {
 
   return (
     <div className="pdf-container">
-      <Document file={RuleBook} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page
-          pageNumber={pageNumber}
-          renderTextLayer={false}
-          renderAnnotationLayer={false}
-        />
-      </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
-      <button onClick={
-        (e) => {
-          e.preventDefault();
-          handlePreviousPage();
-        }
-      } disabled={pageNumber === 1}>
-        Previous Page
-      </button>
-      <button onClick={
-        (e) => {
-          e.preventDefault();
-          handleNextPage();
-        }
-      } disabled={pageNumber === numPages}>
-        Next Page
-      </button>
+      <div className="pdf-doc">
+        <Document file={RuleBook} onLoadSuccess={onDocumentLoadSuccess}>
+          <Page
+            pageNumber={pageNumber}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+          />
+        </Document>
+      </div>
+      <div className="pdf-explorer">
+        <p>
+          Page {pageNumber} of {numPages}
+        </p>
+        <button onClick={
+          (e) => {
+            e.preventDefault();
+            handlePreviousPage();
+          }
+        } disabled={pageNumber === 1}>
+          Previous
+        </button>
+        <button onClick={
+          (e) => {
+            e.preventDefault();
+            handleNextPage();
+          }
+        } disabled={pageNumber === numPages}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };
