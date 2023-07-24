@@ -33,13 +33,15 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="header">
-        <h1 className="header-title">Oldskool Vanguard</h1>
+        <div className="header-container">
+          <h1 className="header-title">Oldskool Vanguard</h1>
 
-        <div className="Navigation">
-          <button className="NavButton" onClick={(e) => {updateState('HomePage')}} >Home</button>
-          <button className="NavButton" onClick={(e) => {updateState('About')}}>About</button>
-          <button className="NavButton" onClick={(e) => {updateState('CardDatabase')}}>Card Database</button>
-          <button className="NavButton" onClick={(e) => {updateState('Rules')}}>Rules</button>
+          <div className="Navigation">
+            <button className="NavButton" onClick={(e) => {updateState('HomePage')}} >Home</button>
+            <button className="NavButton" onClick={(e) => {updateState('About')}}>About</button>
+            <button className="NavButton" onClick={(e) => {updateState('CardDatabase')}}>Card Database</button>
+            <button className="NavButton" onClick={(e) => {updateState('Rules')}}>Rules</button>
+          </div>
         </div>
       </header>
 
