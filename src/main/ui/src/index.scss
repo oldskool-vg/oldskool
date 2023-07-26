@@ -14,23 +14,22 @@ html, body {
   padding: 0;
 }
 
+
+/************* "Header" Styles ***************/
 header {
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 30px 15%;
   font-size: large;
 }
-
 .header-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-
 .header-title {
   margin: 0;
 }
-
 .Navigation {
   button {
     background-color: var(--color-primary);
@@ -44,6 +43,7 @@ header {
     color: var(--color-accent);
   }
 }
+/************* "Header" Styles ***************/
 
 .parent-cards {
   display: flex;
@@ -62,9 +62,39 @@ header {
   margin-left: 10px;
 }
 
+
+/************* "About" Styles ***************/
 .about {
-  margin: 0% 15%;
+  width: 100%;
 }
+.accordion {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.accordion-item {
+  border-bottom: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0px 30px 40px 30px;
+  width: 70%;
+}
+.accordion-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.accordion-header:hover {
+  color: var(--color-accent);
+  transition-duration: 0.3s;
+}
+.accordion-content {
+  white-space: pre-wrap;
+}
+/************* "About" Styles ***************/
+
 
 .rules {
   margin: 0% 15%;
