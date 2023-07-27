@@ -277,22 +277,49 @@ const mockData: CardData[] = [
 
 type CardsProps = {
   search: string;
+  filters: any[];
+  filterTypes: string[];
 };
 
-const Cards: React.FC<CardsProps> = ({ search }) => {
+const Cards: React.FC<CardsProps> = ({ search, filters, filterTypes }) => {
   const [cards, setCards] = useState<CardData[]>([]);
   const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
 
   useEffect(() => {
-    if (search === '') {
+    if (search === '' && !filters.length) {
       setFilteredCards(cards);
     } else {
-      const filtered = cards.filter((card) => (
+      let filtered = cards.filter((card) => (
         card.name.toLowerCase().includes(search)
       ))
+      if (filterTypes.includes('Grade')) {
+        filtered = filtered.filter((card) => (
+          filters.includes(card.grade)
+        ))
+      }
+      if (filterTypes.includes('Power')) {
+        filtered = filtered.filter((card) => (
+          filters.includes(card.power)
+        ))
+      }
+      if (filterTypes.includes('Shield')) {
+        filtered = filtered.filter((card) => (
+          filters.includes(card.shield)
+        ))
+      }
+      if (filterTypes.includes('Clan')) {
+        filtered = filtered.filter((card) => (
+          filters.includes(card.clan)
+        ))
+      }
+      if (filterTypes.includes('Sets')) {
+        filtered = filtered.filter((card) => (
+          card.sets.some((set) => filters.includes(set))
+        ));
+      }
       setFilteredCards(filtered)
     }
-  }, [search])
+  }, [search, filters])
 
   useEffect(() => {
     setCards(mockData);
