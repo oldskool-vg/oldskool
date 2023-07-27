@@ -14,8 +14,8 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
   }
 
   const openAnimation = useSpring({
-    from: { opacity: 0, maxHeight: 25 },
-    to: { opacity: 1, maxHeight: isActive ? 600 : 25 },
+    from: { maxHeight: 25 },
+    to: { maxHeight: isActive ? 1000 : 25 },
     config: { duration: 300 }
   })
 

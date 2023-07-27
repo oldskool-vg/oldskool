@@ -3,6 +3,7 @@ import Banlist from './Banlist';
 import LegalSets from './LegalSets';
 import Rulebook from './Rulebook';
 import RuleDifferences from './RuleDifferences';
+import { useSpring, animated } from "react-spring";
 
 interface RulesProps {
   updateState: (newState: string) => void;
@@ -14,69 +15,72 @@ const Rules: React.FC<RulesProps> = ({updateState}) => {
   }
 
   const [showBanlist, setShowBanlist] = useState<boolean>(false);
-  let banlistDetails = null;
-  if (showBanlist === true) {
-    banlistDetails = <Banlist />
-  } else {
-    banlistDetails = null;
-  }
+  const openBanlist = useSpring({
+    from: { maxHeight: 25 },
+    to: { maxHeight: showBanlist ? 1000 : 25 },
+    config: { duration: 300 }
+  })
 
   const [showLegalSets, setShowLegalSets] = useState<boolean>(false);
-  let legalSetDetails = null;
-  if (showLegalSets === true) {
-    legalSetDetails = <LegalSets />
-  } else {
-    legalSetDetails = null;
-  }
+  const openLegalSets = useSpring({
+    from: { maxHeight: 25 },
+    to: { maxHeight: showLegalSets ? 1000 : 25 },
+    config: { duration: 300 }
+  })
 
   const [showRulebook, setShowRulebook] = useState<boolean>(false);
-  let rulebookDetails = null;
-  if (showRulebook === true) {
-    rulebookDetails = <Rulebook />
-  } else {
-    rulebookDetails = null;
-  }
+  const openRulebook = useSpring({
+    from: { maxHeight: 25 },
+    to: { maxHeight: showRulebook ? 1000 : 25 },
+    config: { duration: 300 }
+  })
 
   const [showRuleDiffs, setShowRuleDiffs] = useState<boolean>(false);
-  let ruleDiffDetails = null;
-  if (showRuleDiffs === true) {
-    ruleDiffDetails = <RuleDifferences />
-  } else {
-    ruleDiffDetails = null;
-  }
+  const openRuleDiffs = useSpring({
+    from: { maxHeight: 25 },
+    to: { maxHeight: showRuleDiffs ? 1000 : 25 },
+    config: { duration: 300 }
+  })
 
 
   return (
     <div className="rules">
-      <div>
-        <h2>Format Rules</h2>
+      <animated.div className="accordion-item" style={openBanlist}>
+        <div className="accordion-header" onClick={() => setShowBanlist(!showBanlist)}>
+          <h2>Banlist</h2>
+          <h2>{showBanlist ? ' - ' : '+'}</h2>
+        </div>
+        <Banlist />
+      </animated.div>
+
+      <div className="go-to-cardpool" onClick={() => switchToCardDB()}>
+        <h2>Card Pool</h2>
+        <h2>⧉</h2>
       </div>
-      <ul>
-        <li>
-          <button onClick={(e) => setShowBanlist(!showBanlist)}>Banlist</button>
-        </li>
-        <div>{banlistDetails}</div>
 
-        <li>
-          <button onClick={() => switchToCardDB()}>Cardpool</button>
-        </li>
+      <animated.div className="accordion-item" style={openLegalSets}>
+        <div className="accordion-header" onClick={() => setShowLegalSets(!showLegalSets)}>
+          <h2>Legal Sets</h2>
+          <h2>{showLegalSets ? ' - ' : '+'}</h2>
+        </div>
+        <LegalSets />
+      </animated.div>
 
-        <li>
-          <button onClick={(e) => setShowLegalSets(!showLegalSets)}>Legal Sets</button>
-        </li>
-        <div>{legalSetDetails}</div>
+      <animated.div className="accordion-item" style={openRulebook}>
+        <div className="accordion-header" onClick={() => setShowRulebook(!showRulebook)}>
+          <h2>Rulebook</h2>
+          <h2>{showRulebook ? ' - ' : '+'}</h2>
+        </div>
+        <Rulebook />
+      </animated.div>
 
-        <li>
-          <button onClick={(e) => setShowRulebook(!showRulebook)}>Rulebook</button>
-        </li>
-        <div>{rulebookDetails}</div>
-
-        <li>
-          <button onClick={(e) => setShowRuleDiffs(!showRuleDiffs)}>Rule Differences between Oldskool and Modern</button>
-        </li>
-        <div>{ruleDiffDetails}</div>
-
-      </ul>
+      <animated.div className="accordion-item" style={openRuleDiffs}>
+        <div className="accordion-header" onClick={() => setShowRuleDiffs(!showRuleDiffs)}>
+          <h2>Rule Differences between Oldskool and Modern</h2>
+          <h2>{showRuleDiffs ? ' - ' : '+'}</h2>
+        </div>
+        <RuleDifferences />
+      </animated.div>
     </div>
   )
 }

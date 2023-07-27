@@ -33,17 +33,21 @@ header {
 .Navigation {
   button {
     background-color: var(--color-primary);
+    border: var(--color-primary);
     color: var(--color-white);
     cursor: pointer;
-    border: var(--color-primary);
     font-size: x-large;
     transition-duration: 0.3s;
   }
-  button:hover {
-    color: var(--color-accent);
-  }
+}
+.yellow-button:hover {
+  color: var(--color-accent);
+}
+.red-button:hover {
+  color: var(--color-secondary);
 }
 /************* "Header" Styles ***************/
+
 
 .parent-cards {
   display: flex;
@@ -63,10 +67,7 @@ header {
 }
 
 
-/************* "About" Styles ***************/
-.about {
-  width: 100%;
-}
+/************* "Accordion" Styles ***************/
 .accordion {
   align-items: center;
   display: flex;
@@ -76,13 +77,13 @@ header {
 .accordion-item {
   border-bottom: 1px solid var(--color-primary);
   color: var(--color-primary);
-  cursor: pointer;
   overflow: hidden;
   padding: 0px 30px 40px 30px;
   width: 70%;
 }
 .accordion-header {
   align-items: center;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
@@ -93,22 +94,23 @@ header {
 .accordion-content {
   white-space: pre-wrap;
 }
+/************* "Accordion" Styles ***************/
+
+
+/************* "About" Styles ***************/
+.about {
+  width: 100%;
+}
 /************* "About" Styles ***************/
 
 
+/************* "Rules" Styles ***************/
 .rules {
-  margin: 0% 15%;
-  button {
-    background: var(--color-white);
-    border: var(--color-white);
-    color: var(--color-highlight);
-    cursor: pointer;
-    font-size: large;
-    text-decoration: underline;
-  }
-  h4 {
-    margin-bottom: 2px;
-  }
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  width: 100%;
   table {
     table-layout: fixed;
     border-collapse: collapse;
@@ -127,12 +129,38 @@ header {
     background-color: rgb(210, 210, 210);
   }
 }
-
-.pdf-container {
-  margin: 10px 0;
-  height: 428px;
+.go-to-cardpool {
+  align-items: center;
+  border-bottom: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
+  padding: 0px 30px;
+  width: 70%;
+}
+.go-to-cardpool:hover {
+  color: var(--color-secondary);
+  transition-duration: 0.3s;
+}
+.pdf-container {
   display: flex;
   flex-direction: column;
+  height: 428px;
   justify-content: space-between;
+  margin: 10px 0;
+  overflow: hidden;
+  button {
+    background-color: var(--color-white);
+    border: var(--color-white);
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: x-large;
+  }
+  button:hover {
+    color: var(--color-accent);
+    transition: 0.3s;
+  }
 }
+/************* "Rules" Styles ***************/

@@ -44,7 +44,7 @@ const RuleBookViewer: React.FC = () => {
             handlePreviousPage();
           }
         } disabled={pageNumber === 1}>
-          Previous
+          ←
         </button>
         <button onClick={
           (e) => {
@@ -52,7 +52,7 @@ const RuleBookViewer: React.FC = () => {
             handleNextPage();
           }
         } disabled={pageNumber === numPages}>
-          Next
+          →
         </button>
       </div>
     </div>
