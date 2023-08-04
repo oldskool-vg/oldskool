@@ -34,3 +34,5 @@ build/
 
 src/main/ui/package-lock.json
 src/main/ui/node_modules
+/node_modules
+/package-lock.json

@@ -10,7 +10,7 @@ export type CardData = {
   effect: string;
   clan: string;
   race: string;
-  image: string;
+  imageurlen: string;
   sets: string[];
   legality: string;
 }

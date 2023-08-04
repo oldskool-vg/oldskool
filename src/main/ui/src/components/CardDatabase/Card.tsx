@@ -3,23 +3,27 @@ import { CardData } from '../../types';
 
 type CardProps = {
   card: CardData;
+  currentModal: String;
+  setCurrentModal:  React.Dispatch<React.SetStateAction<string>>;
 };
 
-const Card: React.FC<CardProps> = ({ card }) => {
+const Card: React.FC<CardProps> = ({ card, currentModal, setCurrentModal }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
+    setCurrentModal(card.name)
   };
 
   const closeModal = () => {
+    setCurrentModal('');
     setModalOpen(false);
   };
 
   return (
     <div>
-      <img src={card.image} alt={card.name} onClick={openModal} />
-      {modalOpen && (
+      <img src={card.imageurlen} alt={card.name} onClick={openModal} />
+      {modalOpen && currentModal === card.name && (
         <dialog open>
           <div>
             <h2>{card.name}</h2>
