@@ -4,16 +4,17 @@ import './index.scss';
 import App from './App';
 import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 
-// import ErrorPage from './components/ErrorPage';
 import HomePage from './components/Home';
 import About from './components/About';
 import CardDatabase from './components/CardDatabase';
 import Rules from './components/Rules';
+import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/carddatabase',
+        path: '/cards',
         element: <CardDatabase />,
       },
       {

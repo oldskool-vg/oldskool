@@ -48,10 +48,10 @@ function Rules() {
         <Banlist />
       </animated.div>
 
-      <div className="go-to-cardpool">
+      <a href={'/cards'} className="go-to-cardpool">
         <h2>Card Pool</h2>
         <h2>⧉</h2>
-      </div>
+      </a>
 
       <animated.div className="accordion-item" style={openLegalSets}>
         <div className="accordion-header" onClick={() => setShowLegalSets(!showLegalSets)}>
