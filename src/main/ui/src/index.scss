@@ -31,12 +31,17 @@ header {
   margin: 0;
 }
 .Navigation {
-  button {
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
+  a {
     background-color: var(--color-primary);
     border: var(--color-primary);
     color: var(--color-white);
     cursor: pointer;
     font-size: x-large;
+    margin: 0 5px;
+    text-decoration: none;
     transition-duration: 0.3s;
   }
 }
