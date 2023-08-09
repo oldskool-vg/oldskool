@@ -5,14 +5,9 @@ import Rulebook from './Rulebook';
 import RuleDifferences from './RuleDifferences';
 import { useSpring, animated } from "react-spring";
 
-interface RulesProps {
-  updateState: (newState: string) => void;
-}
 
-const Rules: React.FC<RulesProps> = ({updateState}) => {
-  const switchToCardDB = () => {
-    updateState('CardDatabase');
-  }
+
+function Rules() {
 
   const [showBanlist, setShowBanlist] = useState<boolean>(false);
   const openBanlist = useSpring({
@@ -53,7 +48,7 @@ const Rules: React.FC<RulesProps> = ({updateState}) => {
         <Banlist />
       </animated.div>
 
-      <div className="go-to-cardpool" onClick={() => switchToCardDB()}>
+      <div className="go-to-cardpool">
         <h2>Card Pool</h2>
         <h2>⧉</h2>
       </div>
