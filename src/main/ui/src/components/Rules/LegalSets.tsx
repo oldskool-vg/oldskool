@@ -121,10 +121,10 @@ function LegalSets() {
             <td>May 19th, 2012</td>
           </tr>
         </tbody>
-
       </table>
 
       <h4>Promo Cards</h4>
+      <a href="https://cardfight.fandom.com/wiki/List_of_Promo_Cards" target="_blank" rel="noreferrer">All EN Promos PR/0002EN to PR/0032EN Are Legal</a>
 
     </div>
   )

@@ -18,7 +18,7 @@ function Rules() {
   const [showLegalSets, setShowLegalSets] = useState<boolean>(false);
   const openLegalSets = useSpring({
     from: { maxHeight: 25 },
-    to: { maxHeight: showLegalSets ? 1000 : 25 },
+    to: { maxHeight: showLegalSets ? 1500 : 25 },
     config: { duration: 300 }
   })
 
