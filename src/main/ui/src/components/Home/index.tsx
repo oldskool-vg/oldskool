@@ -1,8 +1,15 @@
+import { useCard } from '../../App';
+
 function HomePage() {
+  const { card } = useCard();
+
   return (
     <div>
+      <img src={card} alt="Card Of The Day"/>
 
-      <p className="dontSueUsPls">Oldskool Vanguard is a website ran by fans of Cardfight!! Vanguard and is in no way affiliated with Bushiroad or the Cardfight!! Vanguard property.</p>
+      <div className="disclaimerContainer">
+        <p className="legalDisclaimer">©bushiroad All Rights Reserved.</p>
+      </div>
     </div>
   )
 }

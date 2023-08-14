@@ -25,7 +25,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
         <h2>{title}</h2>
         <h2>{isActive ? ' - ' : '+'}</h2>
       </div>
-      <text className="accordion-content">{content}</text>
+      <p className="accordion-content">{content}</p>
     </animated.div>
   );
 }

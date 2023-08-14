@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Banlist from './Banlist';
 import LegalSets from './LegalSets';
 import Rulebook from './Rulebook';

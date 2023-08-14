@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RuleBook from '../assets/CFVGPlaybook.pdf';
-import { Document, Page, pdfjs   } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const RuleBookViewer: React.FC = () => {
-  const [numPages, setNumPages] = React.useState(0);
-  const [pageNumber, setPageNumber] = React.useState(1);
+  const [numPages, setNumPages] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1);
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
