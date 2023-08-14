@@ -31,9 +31,6 @@ header {
   margin: 0;
 }
 .Navigation {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-around;
   a {
     background-color: var(--color-primary);
     border: var(--color-primary);
@@ -84,7 +81,7 @@ header {
   color: var(--color-primary);
   overflow: hidden;
   padding: 0px 30px 40px 30px;
-  width: 70%;
+  width: 65%;
 }
 .accordion-header {
   align-items: center;
@@ -104,6 +101,10 @@ header {
 
 /************* "About" Styles ***************/
 .about {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
   width: 100%;
 }
 /************* "About" Styles ***************/
@@ -144,7 +145,7 @@ header {
   overflow: hidden;
   padding: 0px 30px;
   text-decoration: none;
-  width: 70%;
+  width: 65%;
 }
 .go-to-cardpool:hover {
   color: var(--color-secondary);
@@ -170,3 +171,8 @@ header {
   }
 }
 /************* "Rules" Styles ***************/
+
+.banner {
+  margin-top: 20px;
+  width: 70%;
+}

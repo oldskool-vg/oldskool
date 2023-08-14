@@ -4,8 +4,7 @@ import LegalSets from './LegalSets';
 import Rulebook from './Rulebook';
 import RuleDifferences from './RuleDifferences';
 import { useSpring, animated } from "react-spring";
-
-
+import banner2 from '../assets/banner2.jpg';
 
 function Rules() {
 
@@ -40,6 +39,8 @@ function Rules() {
 
   return (
     <div className="rules">
+      <img src={banner2} className="banner" />
+
       <animated.div className="accordion-item" style={openBanlist}>
         <div className="accordion-header" onClick={() => setShowBanlist(!showBanlist)}>
           <h2>Banlist</h2>
