@@ -39,8 +39,7 @@ function Rules() {
 
   return (
     <div className="rules">
-      <img src={banner2} className="banner" />
-
+      <img src={banner2} className="banner" alt="banner2" />
       <animated.div className="accordion-item" style={openBanlist}>
         <div className="accordion-header" onClick={() => setShowBanlist(!showBanlist)}>
           <h2>Banlist</h2>
@@ -77,6 +76,10 @@ function Rules() {
         </div>
         <RuleDifferences />
       </animated.div>
+
+      <div className="disclaimerContainer">
+        <p className="legalDisclaimer">©bushiroad All Rights Reserved.</p>
+      </div>
     </div>
   )
 }
