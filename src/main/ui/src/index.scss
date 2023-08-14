@@ -99,6 +99,16 @@ header {
 /************* "Accordion" Styles ***************/
 
 
+/************* "Home" Styles ***************/
+.home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/************* "Home" Styles ***************/
+
+
 /************* "About" Styles ***************/
 .about {
   align-items: center;
@@ -106,6 +116,26 @@ header {
   flex-direction: column;
   margin-bottom: 40px;
   width: 100%;
+}
+.COTDContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.COTD {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-around;
+}
+.COTDInfo {
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 12px;
+  display: flex;
+  padding: 0% 2%;
+  width: 50%;
 }
 /************* "About" Styles ***************/
 
@@ -173,6 +203,7 @@ header {
 /************* "Rules" Styles ***************/
 
 .banner {
+  border-radius: 12px;
   margin-top: 20px;
   width: 70%;
 }

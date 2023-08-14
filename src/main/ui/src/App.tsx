@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { CardData } from './types';
 import { Outlet, useOutletContext } from 'react-router-dom';
 
-type CardOfTheDay = { card: string };
+type CardOfTheDay = { card: CardData };
 
 const App: React.FC = () => {
-  const [card, setCard] = useState('');
+  const [card, setCard] = useState<CardOfTheDay>();
 
   useEffect(() => {
     axios.get('http://localhost:8080/cards/Wingal')
       .then((res) => {
-        console.log(res.data.imageurlen);
-        setCard(res.data.imageurlen);
-
-      })
-      .then(() => {
-        console.log('cotd is', card);
+        setCard(res.data);
       })
       .catch((err) => {
         console.error('Error getting card data', err)
