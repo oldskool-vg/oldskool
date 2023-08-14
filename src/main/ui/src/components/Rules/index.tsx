@@ -39,7 +39,7 @@ function Rules() {
 
   return (
     <div className="rules">
-      <img src={banner2} className="banner" alt="banner2" />
+      <img src={banner2} className="bannerByItself" alt="banner2" />
       <animated.div className="accordion-item" style={openBanlist}>
         <div className="accordion-header" onClick={() => setShowBanlist(!showBanlist)}>
           <h2>Banlist</h2>

@@ -201,12 +201,39 @@ header {
   }
 }
 /************* "Rules" Styles ***************/
-
-.banner {
-  border-radius: 12px;
+.bannerContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 20px;
   width: 70%;
 }
+.banner {
+  border-radius: 12px;
+  width: 65%;
+}
+.discordContainer {
+  cursor: pointer;
+  background: var(--color-primary);
+  border-radius: 12px;
+  padding: 2%;
+  width: 23%;
+}
+.discordContainer:hover {
+  background: var(--color-accent);
+  transition: 0.3s;
+}
+.discordIcon {
+  width: 100%;
+}
+
+.bannerByItself {
+  margin-top: 20px;
+  border-radius: 12px;
+  width: 70%;
+}
+
 .disclaimerContainer {
   width: 70%;
 }
