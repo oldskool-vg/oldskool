@@ -111,10 +111,29 @@ header {
 
 
 /************* "Home" Styles ***************/
+@keyframes backgrounds {
+  0% {
+    background: url('components/assets/cray-bg.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  50% {
+    background: url('components/assets/cray-bg2.png');
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  100% {
+    background: url('components/assets/cray-bg.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+
 .homeContainer {
-  background-image: url('components/assets/cray-bg.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
+  animation-name: backgrounds;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   height: 100vh;
 }
 .home {
@@ -137,7 +156,6 @@ header {
   color: var(--color-primary);
   display: flex;
   justify-content: center;
-  // padding: 0% 2%;
   margin: 3% 0;
   width: 100%;
 }
