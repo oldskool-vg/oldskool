@@ -28,8 +28,10 @@ function CardSearch() {
 
   return (
     <>
-      <input className='search-bar' placeholder='Search!' onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
-      <Select options={filterOptions} isMulti closeMenuOnSelect={false} onChange={(e) => filterHandler(e)}/>
+      <div className='search'>
+        <input className='search-bar' placeholder='Search!' onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
+        <Select className='search-filter' placeholder='Select filters...' options={filterOptions} isMulti closeMenuOnSelect={false} onChange={(e) => filterHandler(e)}/>
+      </div>
       <div className='parent-cards'>
         <Cards search={search} filters={filters} filterTypes={filterTypes}/>
       </div>

@@ -64,7 +64,18 @@ header {
   margin: 10px;
 }
 
+.search {
+  display: flex;
+  margin-top: 10px;
+}
+
 .search-bar {
+  margin-left: 10px;
+  height: 30px;
+  font-size: medium;
+}
+
+.search-filter {
   margin-left: 10px;
 }
 
@@ -239,4 +250,46 @@ header {
 }
 .legalDisclaimer {
   align-self: flex-start;
+}
+
+/************* "Card Modal" Styles ***************/
+.cardModal {
+  background: var(--color-primary);
+  color: var(--color-white);
+  width: 50%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.cardModalHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardModalClose {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  height: 50%;
+}
+
+.cardModalContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardModalAttributes {
+  width: 50%;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }

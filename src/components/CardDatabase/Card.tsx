@@ -22,25 +22,35 @@ const Card: React.FC<CardProps> = ({ card, currentModal, setCurrentModal }) => {
 
   return (
     <div>
-      <img src={card.imageurlen} alt={card.name} onClick={openModal} />
+      <img src={card.imageurlen} alt={card.name} onClick={() => {currentModal === '' ? openModal() : closeModal()}} />
       {modalOpen && currentModal === card.name && (
-        <dialog open>
-          <div>
+        <div>
+        <dialog className='cardModal' open>
+          <div className='cardModalHeader'>
             <h2>{card.name}</h2>
-            <p>Grade: {card.grade}</p>
-            <p>Card Type: {card.cardType}</p>
-            <p>Power: {card.power}</p>
-            <p>Shield: {card.shield}</p>
-            <p>Skill: {card.skill}</p>
-            <p>Flavor: {card.flavor}</p>
-            <p>Effect: {card.effect}</p>
-            <p>Clan: {card.clan}</p>
-            <p>Race: {card.race}</p>
-            <p>Sets: {card.sets}</p>
-            <p>Legality: {card.legality}</p>
-            <button onClick={closeModal}>Close</button>
+            <button className='cardModalClose' onClick={closeModal}>x</button>
+          </div>
+          <div className='cardModalContent'>
+            <div className='cardModalAttributes'>
+              <p>Grade: {card.grade}</p>
+              <p>Card Type: {card.cardtype}</p>
+              <p>Power: {card.power}</p>
+              <p>Shield: {card.shield}</p>
+              <p>Skill: {card.skill}</p>
+              <p>Flavor: {card.flavor}</p>
+              <p>Effect: {card.effect}</p>
+              <p>Clan: {card.clan}</p>
+              <p>Race: {card.race}</p>
+              <p>Sets: {card.sets}</p>
+              <p>Legality: {card.legality}</p>
+            </div>
+            <div>
+              <img className='cardModalImg' src={card.imageurlen} alt={card.name}/>
+            </div>
           </div>
         </dialog>
+        <div className='backdrop' onClick={closeModal}></div>
+      </div>
       )}
     </div>
   );
