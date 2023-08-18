@@ -111,11 +111,58 @@ header {
 
 
 /************* "Home" Styles ***************/
+.homeContainer {
+  background-image: url('components/assets/cray-bg.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+}
 .home {
   align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+.COTDContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.COTDHeader {
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 3px 3px 1px 1px var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  // padding: 0% 2%;
+  margin: 3% 0;
+  width: 100%;
+}
+.COTD {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-around;
+}
+.COTDInfo {
+  align-items: center;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 3px 3px 1px 1px var(--color-primary);
+  display: flex;
+  padding: 0% 2%;
+  width: 50%;
+}
+.cardContainer {
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 3px 3px 1px 1px var(--color-primary);
+  display: flex;
+  padding: 1%;
 }
 /************* "Home" Styles ***************/
 
@@ -127,26 +174,6 @@ header {
   flex-direction: column;
   margin-bottom: 40px;
   width: 100%;
-}
-.COTDContainer {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-.COTD {
-  align-items: stretch;
-  display: flex;
-  justify-content: space-around;
-}
-.COTDInfo {
-  align-items: center;
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  border-radius: 12px;
-  display: flex;
-  padding: 0% 2%;
-  width: 50%;
 }
 /************* "About" Styles ***************/
 
