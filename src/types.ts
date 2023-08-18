@@ -2,7 +2,7 @@ export type CardData = {
   _id: string;
   name: string;
   grade: string;
-  cardType: string;
+  cardtype: string;
   power: number;
   shield: number;
   skill: string;
