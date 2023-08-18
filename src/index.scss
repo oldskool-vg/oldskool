@@ -117,13 +117,23 @@ header {
     background-position: 50% 50%;
     background-size: cover;
   }
+  25% {
+    background: url('components/assets/cray-bg3.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+  }
   50% {
-    background: url('components/assets/cray-bg2.png');
+    background: url('components/assets/cray-bg4.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  75% {
+    background: url('components/assets/cray-bg5.jpg');
     background-position: 50% 50%;
     background-size: cover;
   }
   100% {
-    background: url('components/assets/cray-bg.jpg');
+    background: url('components/assets/cray-bg2.jpg');
     background-position: 50% 50%;
     background-size: cover;
   }
