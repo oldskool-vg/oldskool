@@ -12,7 +12,7 @@ function HomePage() {
           (
             <div className="COTDContainer">
               <div className="COTDHeader">
-                <h1>Card Of The Day: { card.name }</h1>
+                <h1>Card Of The Day</h1>
               </div>
               <div className="COTD">
                 <div className="cardContainer">
@@ -20,7 +20,7 @@ function HomePage() {
                 </div>
                 <div className="COTDInfo">
                   <div>
-                    <p>Name: { card.name }</p>
+                    <h2>{ card.name }</h2>
                     <p>Grade: { card.grade }</p>
                     <p>Power: { card.power }</p>
                     <p>Shield: { card.shield }</p>
