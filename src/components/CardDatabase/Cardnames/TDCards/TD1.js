@@ -1,5 +1,4 @@
-const TD1 = [
-  'Crimson Butterfly, Brigitte', // TD 1
+const TD1 = [ 'Crimson Butterfly, Brigitte', // 16 cards
   'Knight of Conviction, Bors',
   'Solitary Knight, Gancelot',
   'Knight of Silence, Gallatin',

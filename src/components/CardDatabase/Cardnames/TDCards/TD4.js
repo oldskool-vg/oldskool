@@ -1,5 +1,4 @@
-const TD4 = [
-  'Oracle Guardian, Apollon',
+const TD4 = [ 'Oracle Guardian, Apollon', // 15 cards
   'Goddess of Flower Divination, Sakuya',
   'Meteor Break Wizard',
   'Oracle Guardian, Wiseman',

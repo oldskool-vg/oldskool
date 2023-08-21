@@ -1,5 +1,4 @@
-const TD2 = [
-  'Dragonic Overlord',
+const TD2 = [ 'Dragonic Overlord', // 16 cards
   'Dragon Monk, Goku',
   'Demonic Dragon Berserker, Yaksha',
   'Dragon Knight, Nehalem',

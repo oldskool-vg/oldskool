@@ -1,5 +1,4 @@
-const BT1 = [
-  'King of Knights, Alfred',
+const BT1 = [ 'King of Knights, Alfred', // 80 cards
   'Blaster Blade',
   'Barcgal',
   'Dragonic Overlord',

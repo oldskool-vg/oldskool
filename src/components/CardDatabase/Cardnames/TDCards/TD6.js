@@ -1,5 +1,4 @@
-const TD6 = [
-  'Thunder Break Dragon',
+const TD6 = [ 'Thunder Break Dragon', // 18 cards
   'Djinn of the Lightning Flash',
   'Plasmabite Dragon',
   'Thunderstorm Dragoon',

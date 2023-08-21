@@ -1,5 +1,4 @@
-const BT7 = [
-  'School Hunter, Leo-pald',
+const BT7 = [ 'School Hunter, Leo-pald', // 102 cards
   'Guardian of Truth, Lox',
   'Binoculus Tiger',
   'Silver Thorn Dragon Tamer, Luquier',
