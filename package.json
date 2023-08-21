@@ -1,4 +1,9 @@
 {
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "name": "ui",
   "version": "0.1.0",
   "private": true,

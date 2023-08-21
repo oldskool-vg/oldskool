@@ -1,4 +1,4 @@
-const TD2 = [ 'Dragonic Overlord', // 16 cards
+module.exports.TD2 = [ 'Dragonic Overlord', // 16 cards
   'Dragon Monk, Goku',
   'Demonic Dragon Berserker, Yaksha',
   'Dragon Knight, Nehalem',

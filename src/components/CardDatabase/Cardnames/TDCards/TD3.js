@@ -1,4 +1,4 @@
-const TD3 = [ 'Gold Rutile', // 15 cards
+module.exports.TD3 = [ 'Gold Rutile', // 15 cards
   'Death Metal Droid',
   'Mr. Invincible',
   'King of Sword',

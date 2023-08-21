@@ -1,4 +1,4 @@
-const TD5 = [ 'Great Silver Wolf, Garmore', // 18 cards
+module.exports.TD5 = [ 'Great Silver Wolf, Garmore', // 18 cards
   'Sleygal Double Edge',
   'Battlefield Storm, Sagramore',
   'Knight of Superior Skills, Beaumains',

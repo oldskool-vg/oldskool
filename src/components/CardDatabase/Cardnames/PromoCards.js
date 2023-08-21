@@ -1,4 +1,4 @@
-const legalPromos = [ 'Wingal', // 31 cards
+module.exports.promoCards = [ 'Wingal', // 31 cards
   'Scale Dragon of the Magma Cave',
   'Guardian of the Skies, Night Griffon',
   'Alfred Early',
