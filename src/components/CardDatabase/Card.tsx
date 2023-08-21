@@ -11,11 +11,13 @@ const Card: React.FC<CardProps> = ({ card, currentModal, setCurrentModal }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
+    document.body.style.overflow = 'hidden';
     setModalOpen(true);
     setCurrentModal(card.name)
   };
 
   const closeModal = () => {
+    document.body.style.overflow = 'unset';
     setCurrentModal('');
     setModalOpen(false);
   };
@@ -33,7 +35,7 @@ const Card: React.FC<CardProps> = ({ card, currentModal, setCurrentModal }) => {
           <div className='cardModalContent'>
             <div className='cardModalAttributes'>
               <p>Grade: {card.grade}</p>
-              <p>Card Type: {card.cardtype}</p>
+              {/* <p>Card Type: {card.cardtype}</p> */}
               <p>Power: {card.power}</p>
               <p>Shield: {card.shield}</p>
               <p>Skill: {card.skill}</p>
@@ -42,7 +44,7 @@ const Card: React.FC<CardProps> = ({ card, currentModal, setCurrentModal }) => {
               <p>Clan: {card.clan}</p>
               <p>Race: {card.race}</p>
               <p>Sets: {card.sets}</p>
-              <p>Legality: {card.legality}</p>
+              {/* <p>Legality: {card.legality}</p> */}
             </div>
             <div>
               <img className='cardModalImg' src={card.imageurlen} alt={card.name}/>
