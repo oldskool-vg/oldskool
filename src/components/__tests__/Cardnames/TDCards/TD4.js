@@ -1,0 +1,17 @@
+const TD4 = [
+  'Oracle Guardian, Apollon',
+  'Goddess of Flower Divination, Sakuya',
+  'Meteor Break Wizard',
+  'Oracle Guardian, Wiseman',
+  'Security Guardian',
+  'Sword Dancer Angel',
+  'Oracle Guardian, Gemini',
+  'Dark Cat',
+  'Weather Girl, Milk',
+  'Battle Sister, Maple',
+  'Luck Bird',
+  'Oracle Guardian, Nike',
+  'Dream Eater',
+  'Victory Maker',
+  'Lozenge Magus',
+]

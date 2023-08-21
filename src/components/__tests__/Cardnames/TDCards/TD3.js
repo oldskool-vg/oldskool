@@ -1,0 +1,17 @@
+const TD3 = [
+  'Gold Rutile',
+  'Death Metal Droid',
+  'Mr. Invincible',
+  'King of Sword',
+  'Super Electromagnetic Lifeform, Storm',
+  'NGM Prototype',
+  'Tough Boy',
+  'Oasis Girl',
+  "Screamin' and Dancin' Announcer, Shout",
+  'Queen of Heart',
+  'Battering Minotaur',
+  'Shining Lady',
+  'Cannon Ball',
+  'Ring Girl, Clara',
+  'Battleraizer',
+]

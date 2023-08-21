@@ -1,0 +1,18 @@
+const TD2 = [
+  'Dragonic Overlord',
+  'Dragon Monk, Goku',
+  'Demonic Dragon Berserker, Yaksha',
+  'Dragon Knight, Nehalem',
+  'Berserk Dragon',
+  'Wyvern Strike, Tejas',
+  'Embodiment of Armor, Bahr',
+  'Dragon Monk, Gojo',
+  'Flame of Hope, Aermo',
+  'Demonic Dragon Madonna, Joka',
+  'Wyvern Strike, Jarran',
+  'Lizard Runner, Undeux',
+  'Dragon Dancer, Monica',
+  'Lizard Soldier, Ganlu',
+  'Dragon Monk, Genjo',
+  'Demonic Dragon Mage, Rakshasa',
+]
