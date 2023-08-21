@@ -78,6 +78,6 @@ module.exports.BT3 = [ 'Stil Vampir', // 82 cards
   'Masked Police, Grander',
   'Karenroid, Daisy',
   'Workerpod, Saturday',
-  'Bloody Calf,',
+  'Bloody Calf',
   'Circle Magus',
 ]

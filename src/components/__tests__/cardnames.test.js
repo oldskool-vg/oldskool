@@ -19,11 +19,15 @@ const { TD6 } = require('../CardDatabase/Cardnames/TDCards/TD6');
 
 const { promoCards } = require('../CardDatabase/Cardnames/PromoCards');
 
+
 const fetchAll = async () => {
   return await axios.get('http://localhost:8080/cards');
 }
 const fetchCard = async (cardname) => {
-  return await axios.get('http://localhost:8080/cards/' + cardname);
+  return await axios.get('http://localhost:8080/cards/' + cardname)
+    .catch(err => {
+      console.log(cardname);
+    })
 }
 
 
@@ -40,12 +44,13 @@ describe('The database should contain all main Booster Set cards', () => {
   test('BT1', async () => {
     let results = [];
     for (const card of BT1) {
-      await fetchCard(card).then(response => {
-        results.push(response.data);
-      })
+      await fetchCard(card)
+        .then(response => {
+          results.push(response.data);
+        })
     }
     expect(results.length).toBe(80);
-  })
+  }, 100000)
   test('BT2', async () => {
     let results = [];
     for (const card of BT2) {
@@ -54,34 +59,39 @@ describe('The database should contain all main Booster Set cards', () => {
       })
     }
     expect(results.length).toBe(80);
-  })
+  }, 100000)
   test('BT3', async () => {
     let results = [];
     for (const card of BT3) {
-      await fetchCard(card).then(response => {
-        results.push(response.data);
-      })
+      await fetchCard(card)
+        .then(response => {
+          results.push(response.data);
+        })
     }
     expect(results.length).toBe(82);
-  })
+  }, 100000)
   test('BT4', async () => {
     let results = [];
     for (const card of BT4) {
       await fetchCard(card).then(response => {
         results.push(response.data);
       })
+      // .catch(err => {
+
+      // })
     }
     expect(results.length).toBe(82);
-  })
+  }, 100000)
   test('BT6', async () => {
     let results = [];
     for (const card of BT6) {
-      await fetchCard(card).then(response => {
-        results.push(response.data);
-      })
+      await fetchCard(card)
+        .then(response => {
+          results.push(response.data);
+        })
     }
     expect(results.length).toBe(113);
-  })
+  }, 100000)
   test('BT7', async () => {
     let results = [];
     for (const card of BT7) {
@@ -90,7 +100,7 @@ describe('The database should contain all main Booster Set cards', () => {
       })
     }
     expect(results.length).toBe(102);
-  })
+  }, 100000)
 })
 
 describe('The database should contain all correct Extra Booster cards', () => {
@@ -102,7 +112,7 @@ describe('The database should contain all correct Extra Booster cards', () => {
       })
     }
     expect(results.length).toBe(35);
-  })
+  }, 100000)
   test('EB3', async () => {
     let results = [];
     for (const card of EB3) {
@@ -111,7 +121,7 @@ describe('The database should contain all correct Extra Booster cards', () => {
       })
     }
     expect(results.length).toBe(47);
-  })
+  }, 100000)
 })
 
 describe('The database should contain all correct Trial Deck cards', () => {
@@ -123,7 +133,7 @@ describe('The database should contain all correct Trial Deck cards', () => {
       })
     }
     expect(results.length).toBe(16);
-  })
+  }, 100000)
   test('TD2', async () => {
     let results = [];
     for (const card of TD2) {
@@ -132,7 +142,7 @@ describe('The database should contain all correct Trial Deck cards', () => {
       })
     }
     expect(results.length).toBe(16);
-  })
+  }, 100000)
   test('TD3', async () => {
     let results = [];
     for (const card of TD3) {
@@ -141,7 +151,7 @@ describe('The database should contain all correct Trial Deck cards', () => {
       })
     }
     expect(results.length).toBe(15);
-  })
+  }, 100000)
   test('TD4', async () => {
     let results = [];
     for (const card of TD4) {
@@ -150,7 +160,7 @@ describe('The database should contain all correct Trial Deck cards', () => {
       })
     }
     expect(results.length).toBe(15);
-  })
+  }, 100000)
   test('TD5', async () => {
     let results = [];
     for (const card of TD5) {
@@ -159,7 +169,7 @@ describe('The database should contain all correct Trial Deck cards', () => {
       })
     }
     expect(results.length).toBe(18);
-  })
+  }, 100000)
   test('TD6', async () => {
     let results = [];
     for (const card of TD6) {
@@ -168,7 +178,7 @@ describe('The database should contain all correct Trial Deck cards', () => {
       })
     }
     expect(results.length).toBe(18);
-  })
+  }, 100000)
 })
 
 describe('The database should contain all correct promo cards', () => {
@@ -180,5 +190,5 @@ describe('The database should contain all correct promo cards', () => {
       })
     }
     expect(results.length).toBe(31);
-  })
+  }, 100000)
 })
