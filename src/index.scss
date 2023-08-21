@@ -284,6 +284,18 @@ header {
   width: 50%;
 }
 
+.cardModalAttribute {
+  display: flex;
+}
+
+.cardModalAttributeTitle {
+  font-weight: bold;
+}
+
+.cardModalSets {
+  display: flex;
+}
+
 .backdrop {
   position: fixed;
   top: 0;

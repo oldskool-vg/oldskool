@@ -34,17 +34,48 @@ const Card: React.FC<CardProps> = ({ card, currentModal, setCurrentModal }) => {
           </div>
           <div className='cardModalContent'>
             <div className='cardModalAttributes'>
-              <p>Grade: {card.grade}</p>
-              {/* <p>Card Type: {card.cardtype}</p> */}
-              <p>Power: {card.power}</p>
-              <p>Shield: {card.shield}</p>
-              <p>Skill: {card.skill}</p>
-              <p>Flavor: {card.flavor}</p>
-              <p>Effect: {card.effect}</p>
-              <p>Clan: {card.clan}</p>
-              <p>Race: {card.race}</p>
-              <p>Sets: {card.sets}</p>
-              {/* <p>Legality: {card.legality}</p> */}
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Grade:&nbsp;</p>
+                <p>{card.grade}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Power:&nbsp;</p>
+                <p>{card.power}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Shield:&nbsp;</p>
+                <p>{card.shield}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Skill:&nbsp;</p>
+                <p>{card.skill}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Flavor:&nbsp;</p>
+                <p>{card.flavor}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Effect:&nbsp;</p>
+                <p>{card.effect}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Clan:&nbsp;</p>
+                <p>{card.clan}</p>
+              </div>
+              <div className='cardModalAttribute'>
+                <p className='cardModalAttributeTitle'>Race:&nbsp;</p>
+                <p>{card.race}</p>
+              </div>
+              <div className='cardModalSets'>
+                <p className='cardModalAttributeTitle'>Sets:&nbsp;</p>
+                <p>{card.sets.map((set, idx) => (
+                  <React.Fragment key={set+idx}>
+                  - {set}
+                  <br />
+                </React.Fragment>
+                ))}
+                </p>
+              </div>
             </div>
             <div>
               <img className='cardModalImg' src={card.imageurlen} alt={card.name}/>
