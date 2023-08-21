@@ -1,4 +1,4 @@
-const BT1 = [ 'King of Knights, Alfred', // 80 cards
+module.exports.BT1 = [ 'King of Knights, Alfred', // 80 cards
   'Blaster Blade',
   'Barcgal',
   'Dragonic Overlord',

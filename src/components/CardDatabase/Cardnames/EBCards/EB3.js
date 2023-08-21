@@ -1,4 +1,4 @@
-const EB3 = [ 'Demonic Lord, Dudley Emperor', // 47 cards
+module.exports.EB3 = [ 'Demonic Lord, Dudley Emperor', // 47 cards
   'Spectral Duke Dragon',
   'Reckless Express',
   'Martial Arts Mutant, Master Beetle',

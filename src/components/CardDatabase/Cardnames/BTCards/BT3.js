@@ -1,4 +1,4 @@
-const BT3 = [ 'Stil Vampir', // 82 cards
+module.exports.BT3 = [ 'Stil Vampir', // 82 cards
   'Demon World Marquis, Amon',
   'Nightmare Doll, Alice',
   'Ravenous Dragon, Gigarex',

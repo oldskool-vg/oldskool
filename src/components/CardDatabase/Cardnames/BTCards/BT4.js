@@ -1,4 +1,4 @@
-const BT4 = [ 'Phantom Blaster Dragon', // 82 cards
+module.exports.BT4 = [ 'Phantom Blaster Dragon', // 82 cards
   'Darkness Maiden, Macha',
   'Skull Witch, Nemain',
   'Enigman Storm',

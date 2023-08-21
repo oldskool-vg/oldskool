@@ -1,4 +1,4 @@
-const EB2 = [ 'Top Idol, Pacifica', // 35 cards
+module.exports.EB2 = [ 'Top Idol, Pacifica', // 35 cards
   'Top Idol, Riviere',
   'Bermuda Princess, Lena',
   'Pearl Sisters, Perle',

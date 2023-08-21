@@ -1,4 +1,4 @@
-const BT2 = [ 'Sky Diver', // 80 cards
+module.exports.BT2 = [ 'Sky Diver', // 80 cards
   'Spirit Exceed',
   'Ruin Shade',
   'Soul Saver Dragon',

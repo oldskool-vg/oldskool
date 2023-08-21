@@ -1,4 +1,4 @@
-const BT6 = [ 'Circular Saw, Kiriel', // 113 cards
+module.exports.BT6 = [ 'Circular Saw, Kiriel', // 113 cards
   'Battle Cupid, Nociel',
   'Ice Prison Necromancer, Cocytus',
   'Incandescent Lion, Blond Ezel',

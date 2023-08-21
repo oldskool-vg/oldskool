@@ -1,5 +1,15 @@
 const axios = require('axios');
-const { promoCards } = require('../CardDatabase/Cardnames/PromoCards');
+
+const { BT1 } = require('../CardDatabase/Cardnames/BTCards/BT1');
+const { BT2 } = require('../CardDatabase/Cardnames/BTCards/BT2');
+const { BT3 } = require('../CardDatabase/Cardnames/BTCards/BT3');
+const { BT4 } = require('../CardDatabase/Cardnames/BTCards/BT4');
+const { BT6 } = require('../CardDatabase/Cardnames/BTCards/BT6');
+const { BT7 } = require('../CardDatabase/Cardnames/BTCards/BT7');
+
+const { EB2 } = require('../CardDatabase/Cardnames/EBCards/EB2');
+const { EB3 } = require('../CardDatabase/Cardnames/EBCards/EB3');
+
 const { TD1 } = require('../CardDatabase/Cardnames/TDCards/TD1');
 const { TD2 } = require('../CardDatabase/Cardnames/TDCards/TD2');
 const { TD3 } = require('../CardDatabase/Cardnames/TDCards/TD3');
@@ -7,6 +17,7 @@ const { TD4 } = require('../CardDatabase/Cardnames/TDCards/TD4');
 const { TD5 } = require('../CardDatabase/Cardnames/TDCards/TD5');
 const { TD6 } = require('../CardDatabase/Cardnames/TDCards/TD6');
 
+const { promoCards } = require('../CardDatabase/Cardnames/PromoCards');
 
 const fetchAll = async () => {
   return await axios.get('http://localhost:8080/cards');
@@ -24,6 +35,84 @@ describe('The database should contain the correct number of card entries total',
   });
 })
 
+
+describe('The database should contain all main Booster Set cards', () => {
+  test('BT1', async () => {
+    let results = [];
+    for (const card of BT1) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(80);
+  })
+  test('BT2', async () => {
+    let results = [];
+    for (const card of BT2) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(80);
+  })
+  test('BT3', async () => {
+    let results = [];
+    for (const card of BT3) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(82);
+  })
+  test('BT4', async () => {
+    let results = [];
+    for (const card of BT4) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(82);
+  })
+  test('BT6', async () => {
+    let results = [];
+    for (const card of BT6) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(113);
+  })
+  test('BT7', async () => {
+    let results = [];
+    for (const card of BT7) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(102);
+  })
+})
+
+describe('The database should contain all correct Extra Booster cards', () => {
+  test('EB2', async () => {
+    let results = [];
+    for (const card of EB2) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(35);
+  })
+  test('EB3', async () => {
+    let results = [];
+    for (const card of EB3) {
+      await fetchCard(card).then(response => {
+        results.push(response.data);
+      })
+    }
+    expect(results.length).toBe(47);
+  })
+})
 
 describe('The database should contain all correct Trial Deck cards', () => {
   test('TD1', async () => {
