@@ -31,6 +31,9 @@ header {
   margin: 0;
 }
 .Navigation {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   a {
     background-color: var(--color-primary);
     border: var(--color-primary);
@@ -267,31 +270,21 @@ header {
   }
 }
 /************* "Rules" Styles ***************/
-.bannerContainer {
+.discordContainer {
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
-  width: 70%;
-}
-.banner {
-  border-radius: 12px;
-  width: 65%;
-}
-.discordContainer {
-  cursor: pointer;
-  background: var(--color-primary);
-  border-radius: 12px;
-  padding: 2%;
-  width: 23%;
-}
-.discordContainer:hover {
-  background: var(--color-accent);
-  transition: 0.3s;
 }
 .discordIcon {
-  width: 100%;
+  background: var(--color-primary);
+  border-radius: 12px;
+  cursor: pointer;
+  max-height: 30px;
+  padding: 15%;
+}
+.discordIcon:hover {
+  background: var(--color-highlight);
+  transition: 0.3s;
 }
 
 .bannerByItself {

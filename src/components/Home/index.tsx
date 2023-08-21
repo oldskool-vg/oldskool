@@ -1,5 +1,4 @@
 import { useCard } from '../../App';
-import bg from '../assets/cray-bg.jpg';
 
 function HomePage() {
   const { card } = useCard();

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CardData } from './types';
 import { Outlet, useOutletContext } from 'react-router-dom';
+import Discord from './components/Discord';
 
 type CardOfTheDay = { card: CardData };
 
@@ -9,7 +10,7 @@ const App: React.FC = () => {
   const [card, setCard] = useState<CardOfTheDay>();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/cards/Wingal')
+    axios.get('http://localhost:8080/cardoftheday')
       .then((res) => {
         setCard(res.data);
       })
@@ -29,6 +30,7 @@ const App: React.FC = () => {
             <a href={'/about'} className="yellow-button">About</a>
             <a href={'/cards'} className="red-button">Card Database</a>
             <a href={'/rules'} className="yellow-button">Rules</a>
+            <Discord />
           </div>
         </div>
       </header>

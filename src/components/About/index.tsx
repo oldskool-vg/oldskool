@@ -8,10 +8,11 @@ function About() {
 
   return (
     <div className="about">
-      <div className="bannerContainer">
+      <img src={banner2} className="bannerByItself" alt="banner1" />
+      {/* <div className="bannerContainer">
         <img src={banner2} className="banner" alt="banner1" />
         <Discord />
-      </div>
+      </div> */}
 
       <div className="accordion">{
         accordionData.map(({title, content}) => (
