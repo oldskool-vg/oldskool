@@ -304,6 +304,8 @@ header {
 .cardModal {
   background: var(--color-primary);
   color: var(--color-white);
+  overflow-y: auto;
+  max-height: 80%;
   width: 50%;
   position: fixed;
   left: 50%;
