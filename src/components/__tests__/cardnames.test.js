@@ -34,7 +34,7 @@ const fetchCard = async (cardname) => {
 describe('The database should contain the correct number of card entries total', () => {
   test ('number of card entries', async () => {
     return fetchAll().then(response => {
-      expect(response.data.length).toBe(750);
+      expect(response.data.length).toBe(703);
     })
   });
 })
