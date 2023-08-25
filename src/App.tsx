@@ -31,7 +31,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const todaysCard = cardOfTheDay().name;
 
-    console.log('todays card is', todaysCard);
+    // console.log('todays card is', todaysCard);
 
     axios.get('http://localhost:8080/cards/' + todaysCard)
       .then((res) => {
