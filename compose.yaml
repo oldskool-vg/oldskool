@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: ./oldskool
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
+  backend:
+    build:
+      context: ./oldskoolbackend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
