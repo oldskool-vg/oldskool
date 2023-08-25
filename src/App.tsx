@@ -3,14 +3,37 @@ import axios from 'axios';
 import { CardData } from './types';
 import { Outlet, useOutletContext } from 'react-router-dom';
 import Discord from './components/Discord';
+import { allCards } from './components/CardDatabase/Cardnames/allCards';
 
 type CardOfTheDay = { card: CardData };
 
 const App: React.FC = () => {
   const [card, setCard] = useState<CardOfTheDay>();
 
+  const cardOfTheDay = () => {
+    // Extract month, day, and year from the date string
+    const date = new Date();
+    const month = date.getMonth();
+    const day = date.getDay();
+    const year = date.getFullYear();
+    // const [month, day, year] = date.split('/').map(Number);
+
+    // Perform some operations to create a hash
+    const hashValue = ((year + month + day) * 137 + 73) % 703;
+
+    // Map the hash value to the desired range [0, 702]
+    const mappedHash = hashValue % 703;
+
+    return allCards[mappedHash];
+  }
+
+
   useEffect(() => {
-    axios.get('http://localhost:8080/cardoftheday')
+    const todaysCard = cardOfTheDay().name;
+
+    console.log('todays card is', todaysCard);
+
+    axios.get('http://localhost:8080/cards/' + todaysCard)
       .then((res) => {
         setCard(res.data);
       })
