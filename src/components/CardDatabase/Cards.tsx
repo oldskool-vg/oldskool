@@ -51,7 +51,9 @@ const Cards: React.FC<CardsProps> = ({ search, filters, filterTypes }) => {
   }, [search, filters])
 
   useEffect(() => {
-    axios.get<CardData[]>('http://localhost:8080/cards')
+    const url = process.env.REACT_APP_API_KEY + '/cards'
+
+    axios.get<CardData[]>(url)
       .then((res) => {
         setCards(res.data);
         setFilteredCards(res.data);

@@ -31,9 +31,10 @@ const App: React.FC = () => {
   useEffect(() => {
     const todaysCard = cardOfTheDay().name;
 
-    // console.log('todays card is', todaysCard);
+    const url = process.env.REACT_APP_API_KEY + '/cards/' + todaysCard;
+    console.log('url is', url);
 
-    axios.get('http://localhost:8080/cards/' + todaysCard)
+    axios.get(url)
       .then((res) => {
         setCard(res.data);
       })
